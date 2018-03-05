@@ -26,7 +26,6 @@ class Takeaway
       (everything = true) if complete == "Y" 
       @order.push(@menu.select_item(item_number, quantity))
     end
-    sms_confirmation
   end
 
   def guess_amount
@@ -43,8 +42,6 @@ class Takeaway
     @order.each_with_index {|item, index| puts "#{index + 1}. #{item[0]["name"]} Price: #{item[0]["cost"]} Quantity: #{item[1]} Total: #{(item[0]["cost"] * item[1].to_f)}"}  
     puts "The final amount is: #{total}"
   end
-
-  private
 
   def sms_confirmation
     TextSender.new(ENV["TWILIO_TO"], "Your order has been placed at #{Time.now.strftime("%H:%M:%S")}")
