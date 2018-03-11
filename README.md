@@ -15,7 +15,7 @@ text_sender_spec.rb
 ## Getting Started
 
 1) Clone or download and unzip repository.   
-`git clone https://github.com/TomJamesDuffy/airport_challenge.git`
+`git clone https://github.com/TomJamesDuffy/takeaway_challenge.git`
 
 2) Install dependencies listed in the Gemfile
 `bundle install`  
